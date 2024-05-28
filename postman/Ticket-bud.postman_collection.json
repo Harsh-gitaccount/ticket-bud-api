@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "0d1911cf-1711-48b9-a872-a0f600da0e25",
+		"name": "Ticket-bud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33583794"
+	},
+	"item": [
+		{
+			"name": "Ticket Purchase",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Harsh\",\r\n    \"lastName\": \"kr\",\r\n    \"email\": \"harsh.kr@example.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/tickets/purchase?content-type=application/json",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tickets",
+						"purchase"
+					],
+					"query": [
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Print Receipt",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tickets/receipt?email=harsh.kr@example.com\n",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tickets",
+						"receipt"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "harsh.kr@example.com\n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tickets/section/A",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tickets",
+						"section",
+						"A"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tickets/remove?email=harsh.kr@example.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tickets",
+						"remove"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "harsh.kr@example.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modify User Seat",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
